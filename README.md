@@ -12,10 +12,14 @@ npm install
 node src/start_server.js
 
 
-## The server should be at:
+## The app should be at:
 
-http://Rs-Mac-mini.local:3000
+http://localhost:3000/demo
 
+
+## If you decide to update the React code and want to build:
+
+NODE_ENV=production node_modules/.bin/webpack -p
 
 
 ## From the root directory, you can run server tests:
