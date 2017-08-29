@@ -25,6 +25,7 @@ NODE_ENV=production node_modules/.bin/webpack -p
 ## From the root directory, you can run server tests:
 
 ./node_modules/lab/bin/lab test/server_tests.js 
+
 < or wherever your npm put lab >
 
 ## And you can run the React tests with:
