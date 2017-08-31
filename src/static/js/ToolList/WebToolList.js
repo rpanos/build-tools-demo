@@ -8,18 +8,19 @@ const React = require('React');
 const _ = require('lodash');
 
 
-var WebToolList = React.createClass({
-    getInitialState: function () {
-        return {
+class WebToolList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             items: [],
             choiceCount: 0
         };
-
-    },
-    componentDidMount: function() {
+        this.updateChoice = this.updateChoice.bind(this);
+    }
+    componentDidMount() {
         this.updateList(this.props.initialListLen);
-    },
-    updateList: function(reqLimit) {
+    }
+    updateList(reqLimit) {
         var that = this, srcUrl;
         if (reqLimit) {
             srcUrl = that.props.dataUrl + '?reqLimit=' + reqLimit
@@ -50,8 +51,8 @@ var WebToolList = React.createClass({
                         choiceCount: 0
                     });
                 });
-    },
-    updateChoice: function(choice, choiceId) {
+    }
+    updateChoice(choice, choiceId) { //() => {
         const items = this.state.items;
 
         let nonNeutralCount = 0, match = _.find(this.state.items, function(item) { return item.id === choiceId });
@@ -74,8 +75,8 @@ var WebToolList = React.createClass({
             items: items,
             choiceCount: nonNeutralCount
         });
-    },
-    render: function () {
+    }
+    render() {
 
         return <div className="survey-app">
                 <div className="survey-intro">
@@ -88,12 +89,12 @@ var WebToolList = React.createClass({
                 <div className="survey-container">
             {this.state.items.map(function (item, number) {
                     return <ToolItem title={item.title} onChoiceClick={this.updateChoice}
-                                     choiceId={item.id} >
+                                     choiceId={item.id}>
                     </ToolItem>
             }, this)}
                 </div>
             </div>;
     }
-});
+}
 
 export default WebToolList;

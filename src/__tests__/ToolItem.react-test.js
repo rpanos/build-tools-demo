@@ -30,18 +30,21 @@ import sinon from 'sinon';
 //});
 
 
-describe('ToolItem changes class after click', () => {
+describe('ToolItem is rendered and then clicked in different sequences', () => {
   const component = shallow(
     <ToolItem title={"React"}  choiceId={1} />
   );
+    it('After rendering', () => {
+        expect(component.find('.tool-item-choices').hasClass('neu-choice')).to.equal(true);
+    });
 
     it('first click to thumbs up, we expect pos class', () => {
         component.find('.thumb-up').simulate('click');
         expect(component.find('.tool-item-choices').hasClass('pos-choice')).to.equal(true);
     });
-    it('second click to thumbs up, we expect neutral class', () => {
+    it('second click to thumbs up, we expect neu-choice class', () => {
         component.find('.thumb-up').simulate('click');
-        expect(component.find('.tool-item-choices').hasClass('neutral')).to.equal(true);
+        expect(component.find('.tool-item-choices').hasClass('neu-choice')).to.equal(true);
     });
     it('third click to thumbs up, we expect pos class again', () => {
         component.find('.thumb-up').simulate('click');

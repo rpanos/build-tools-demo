@@ -4,14 +4,17 @@
 
 const React = require('React');
 
-var ToolItem = React.createClass({
-    getInitialState: function () {
-        return {
+class ToolItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             choice: 'neu',
-            choiceClass: 'tool-item-choices neutral and-init'
+            choiceClass: 'tool-item-choices neu-choice'
         };
-    },
-    clickUp: function () {
+        this.clickUp = this.clickUp.bind(this);
+        this.clickDown = this.clickDown.bind(this);
+    }
+    clickUp() {
         if (this.state.choice === 'neu' || this.state.choice === 'neg') {
             this.setState({
                 choice: 'pos',
@@ -24,15 +27,15 @@ var ToolItem = React.createClass({
         } else {
             this.setState({
                 choice: 'neu',
-                choiceClass: 'tool-item-choices neutral'
+                choiceClass: 'tool-item-choices neu-choice'
             });
             // send count up
             if (this.props.onChoiceClick) {
                 this.props.onChoiceClick('neu', this.props.choiceId);
             }
         }
-    },
-    clickDown: function () {
+    }
+    clickDown() {
         if (this.state.choice === 'neu' || this.state.choice === 'pos') {
             this.setState({
                 choice: 'neg',
@@ -45,15 +48,15 @@ var ToolItem = React.createClass({
         } else {
             this.setState({
                 choice: 'neu',
-                choiceClass: 'tool-item-choices neutral'
+                choiceClass: 'tool-item-choices neu-choice'
             });
                 // send count up
             if (this.props.onChoiceClick) {
                 this.props.onChoiceClick('neu', this.props.choiceId);
             }
         }
-    },
-    render: function () {
+    }
+    render() {
         return <div className="tool-item-container">
             <div className="tool-item-title">
                 {this.props.title}
@@ -68,6 +71,6 @@ var ToolItem = React.createClass({
             </div>
         </div>;
     }
-});
+}
 
 export default ToolItem;
