@@ -87,12 +87,9 @@ var WebToolList = React.createClass({
                 </div>
                 <div className="survey-container">
             {this.state.items.map(function (item, number) {
-                console.log(number, '= item =', item);
-                //return <li key={number}>{item}</li>
                     return <ToolItem title={item.title} onChoiceClick={this.updateChoice}
                                      choiceId={item.id} >
                     </ToolItem>
-
             }, this)}
                 </div>
             </div>;

@@ -12,7 +12,6 @@ var ToolItem = React.createClass({
         };
     },
     clickUp: function () {
-        //console.log('TOP - clickUp-this.state', this.state);
         if (this.state.choice === 'neu' || this.state.choice === 'neg') {
             this.setState({
                 choice: 'pos',
@@ -55,8 +54,6 @@ var ToolItem = React.createClass({
         }
     },
     render: function () {
-        //console.log('render-this.state', this.state);
-
         return <div className="tool-item-container">
             <div className="tool-item-title">
                 {this.props.title}

@@ -18,8 +18,20 @@ describe('ToolItem changes class after clicks', () => {
 
         setTimeout(() => {
             console.log('Times up -- stop!');
+                webToolListTests0();
                 webToolListTests1();
+
+                it('after updateChoice called three times, the length of items should be 10 after the second call', () => {
+                    setTimeout(() => {
+                        webToolListTests3();
+                    }, 500);
+                });
+
             }, 500);
+
+        function webToolListTests0() {
+            expect(component.state().items.length).toEqual(5);
+        }
 
         function webToolListTests1() {
             expect(component.state().choiceCount).toEqual(0);
@@ -29,6 +41,10 @@ describe('ToolItem changes class after clicks', () => {
             expect(component.state().choiceCount).to.equal(2);
             component.instance().updateChoice('pos', 0);
             expect(component.state().choiceCount).to.equal(3);
+        }
+
+        function webToolListTests3() {
+            expect(component.state().items.length).toEqual(5);
         }
     });
 
