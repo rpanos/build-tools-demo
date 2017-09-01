@@ -2,7 +2,7 @@
  * Created by rpanos on 8/28/17.
  */
 
-import React from 'react';
+import react from 'react';
 import ToolItem from '../static/js/ToolList/ToolItem';
 import WebToolList from '../static/js/ToolList/WebToolList';
 import { mount, shallow } from 'enzyme';

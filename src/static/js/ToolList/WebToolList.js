@@ -4,7 +4,7 @@
 
 import ToolItem from '../ToolList/ToolItem';
 
-const React = require('React');
+const React = require('react');
 const _ = require('lodash');
 
 
@@ -79,6 +79,7 @@ class WebToolList extends React.Component {
     render() {
 
         return <div className="survey-app">
+                <div className="survey-wrapper">
                 <div className="survey-intro">
                     <div className="wm-icon"></div>
                     <h2>JS Tool Survey</h2>
@@ -92,6 +93,7 @@ class WebToolList extends React.Component {
                                      choiceId={item.id}>
                     </ToolItem>
             }, this)}
+                </div>
                 </div>
             </div>;
     }

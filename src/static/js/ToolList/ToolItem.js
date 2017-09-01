@@ -2,7 +2,7 @@
  * Created by rpanos on 8/28/17.
  */
 
-const React = require('React');
+const React = require('react');
 
 class ToolItem extends React.Component {
     constructor(props) {

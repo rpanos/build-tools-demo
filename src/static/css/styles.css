@@ -5,6 +5,18 @@
     background-color: #0074b8;
     color: #ffdd5a;
     padding: 20px;
+
+    font-family: myriad-pro,BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.survey-intro {
+    background-color: white;
+    padding: 10px;
+
+    color: #444;
+}
+.survey-intro h2 {
+    color: #0074b8;
 }
 
 .wm-icon {
@@ -27,7 +39,7 @@
 }
 
 .tool-item-container {
-    height: 44px;
+    height: 46px;
     width: 300px;
 
     border-radius: 4px;
@@ -35,18 +47,21 @@
 
     color: #444;
 
-    background: #f5f6f6; /* Old browsers */
-    background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: #ffdd5a;
+
+    /*background: #f5f6f6; !* Old browsers *!*/
+    /*background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+
 }
 
 .tool-item-container .tool-item-title {
     width: 160px;
-    height: 32px;
+    height: 36px;
     /*background: yellowgreen;*/
-    padding: 3px 10px;
-    line-height: 32px;
+    padding: 5px 10px;
+    line-height: 36px;
     float: left;
 }
 
@@ -54,12 +69,11 @@
 .tool-item-container .tool-item-choices {
     width: 80px;
     /*background: yellow;*/
-    height: 32px;
+    height: 36px;
     margin: 5px;
     float: right;
 
     font-size: 20px;
-
 }
 
 .tool-item-container .tool-item-choices .thumb-up,
