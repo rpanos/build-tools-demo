@@ -2,17 +2,19 @@
  * Created by rpanos on 8/28/17.
  */
 
-const React = require('React');
+const React = require('react');
 
-var ToolItem = React.createClass({
-    getInitialState: function () {
-        return {
+class ToolItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             choice: 'neu',
-            choiceClass: 'tool-item-choices neutral and-init'
+            choiceClass: 'tool-item-choices neu-choice'
         };
-    },
-    clickUp: function () {
-        //console.log('TOP - clickUp-this.state', this.state);
+        this.clickUp = this.clickUp.bind(this);
+        this.clickDown = this.clickDown.bind(this);
+    }
+    clickUp() {
         if (this.state.choice === 'neu' || this.state.choice === 'neg') {
             this.setState({
                 choice: 'pos',
@@ -25,15 +27,15 @@ var ToolItem = React.createClass({
         } else {
             this.setState({
                 choice: 'neu',
-                choiceClass: 'tool-item-choices neutral'
+                choiceClass: 'tool-item-choices neu-choice'
             });
             // send count up
             if (this.props.onChoiceClick) {
                 this.props.onChoiceClick('neu', this.props.choiceId);
             }
         }
-    },
-    clickDown: function () {
+    }
+    clickDown() {
         if (this.state.choice === 'neu' || this.state.choice === 'pos') {
             this.setState({
                 choice: 'neg',
@@ -46,17 +48,15 @@ var ToolItem = React.createClass({
         } else {
             this.setState({
                 choice: 'neu',
-                choiceClass: 'tool-item-choices neutral'
+                choiceClass: 'tool-item-choices neu-choice'
             });
                 // send count up
             if (this.props.onChoiceClick) {
                 this.props.onChoiceClick('neu', this.props.choiceId);
             }
         }
-    },
-    render: function () {
-        //console.log('render-this.state', this.state);
-
+    }
+    render() {
         return <div className="tool-item-container">
             <div className="tool-item-title">
                 {this.props.title}
@@ -71,6 +71,6 @@ var ToolItem = React.createClass({
             </div>
         </div>;
     }
-});
+}
 
 export default ToolItem;
