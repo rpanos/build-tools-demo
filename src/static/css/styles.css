@@ -31,7 +31,7 @@
 }
 
 .survey-container {
-    margin: 30px auto;
+    margin: 20px auto;
     width: 320px;
     padding: 10px;
     border-radius: 5px;
@@ -43,23 +43,16 @@
     width: 300px;
 
     border-radius: 4px;
-    margin: 4px 0;
+    margin: 4px auto;
 
     color: #444;
 
     background: #ffdd5a;
-
-    /*background: #f5f6f6; !* Old browsers *!*/
-    /*background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); !* FF3.6-15 *!*/
-    /*background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); !* Chrome10-25,Safari5.1-6 *!*/
-    /*background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
-
 }
 
 .tool-item-container .tool-item-title {
     width: 160px;
     height: 36px;
-    /*background: yellowgreen;*/
     padding: 5px 10px;
     line-height: 36px;
     float: left;
@@ -68,7 +61,6 @@
 
 .tool-item-container .tool-item-choices {
     width: 80px;
-    /*background: yellow;*/
     height: 36px;
     margin: 5px;
     float: right;
@@ -93,20 +85,20 @@
 .tool-item-container .tool-item-choices .icon-wrapper:last-child {
     float:right;
 }
-.tool-item-container .tool-item-choices.neutral .thumb-up {
-    background-color: transparent;
+.tool-item-container .tool-item-choices.neu-choice .thumb-up {
+    background-color: #0074b8;
 }
 
 .tool-item-container .tool-item-choices.neg-choice .thumb-up {
-    background-color: transparent;
+    background-color: #0074b8;
 }
 
 .tool-item-container .tool-item-choices.pos-choice .thumb-up {
     background-color: green;
 }
 
-.tool-item-container .tool-item-choices.neutral .thumb-down {
-    background-color: transparent;
+.tool-item-container .tool-item-choices.neu-choice .thumb-down {
+    background-color: #0074b8;
 }
 
 .tool-item-container .tool-item-choices.neg-choice .thumb-down {
@@ -114,6 +106,6 @@
 }
 
 .tool-item-container .tool-item-choices.pos-choice .thumb-down {
-    background-color: transparent;
+    background-color: #0074b8;
 }
 
