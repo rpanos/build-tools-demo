@@ -16,16 +16,16 @@ module.exports = {
         cacheDirectory: 'babel_cache',
         presets: ['react', 'es2015']
       }
-    }
-      //,
-      //  {
-		//	test: /\.js$/,
-		//	include: [
-		//		path.resolve(__dirname, 'src')
-		//	],
-		//	loader: 'eslint',
-		//	exclude: /node_modules/
-		//}
+    },
+
+		{
+			test: /\.js$/,
+			include: [
+				path.resolve(__dirname, 'src')
+			],
+			loader: 'eslint',
+			exclude: /node_modules/
+		}
     ]
   },
   plugins: [
