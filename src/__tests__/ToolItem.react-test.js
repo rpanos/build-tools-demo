@@ -9,27 +9,6 @@ import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
 
-//import {shallow} from 'enzyme';
-
-
-//test('ToolItem changes class after click', () => {
-//  const component = shallow(
-//    <ToolItem title={"React"}  choiceId={1} />
-//  );
-//
-//  //expect(checkbox.text()).toEqual('Off');
-//
-//  component.find('.thumb-up').simulate('click');
-//
-//  expect(component.find('.tool-item-choices').hasClass('pos-choice')).to.equal(true);
-//
-//  component.find('.thumb-up').simulate('click');
-//
-//  expect(component.find('.tool-item-choices').hasClass('neutral')).to.equal(true);
-//
-//});
-
-
 describe('ToolItem is rendered and then clicked in different sequences', () => {
   const component = shallow(
     <ToolItem title={"React"}  choiceId={1} />

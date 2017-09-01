@@ -20,7 +20,8 @@ describe('ToolItem changes class after clicks', () => {
             webToolListTestsA0();
             webToolListTestsA1();
 
-            it('after updateChoice called three times, the length of items should be 10 after the second call', () => {
+            it('after updateChoice called three times, the length of items should be 10 ' +
+                'after the second call', () => {
                 setTimeout(() => {
                     webToolListTestsA3();
                 }, 500);
@@ -53,19 +54,17 @@ describe('ToolItem length changes after updateList is called', () => {
         <WebToolList initialListLen={5} initialAnswerLen={3} dataUrl="http://localhost:3000/get-list"/>
       );
 
-    it('updateList is called, updates state: items', () => {
-
+    it('after initial render, items length is now 5', () => {
         setTimeout(() => {
-                webToolListTestsB0();
+            webToolListTestsB0();
+            it('updateList is called with param of 8 after initial render,' +
+                        ' items length is now 8', () => {
                 component2.instance().updateList(8);
-
-                it('after updateChoice called three times, the length of items should be 10 after the second call', () => {
-                    setTimeout(() => {
+                setTimeout(() => {
                         webToolListTestsB3();
-                    }, 500);
-                });
-
-            }, 500);
+                }, 500);
+            });
+        }, 500);
 
         function webToolListTestsB0() {
             expect(component2.state().items.length).toEqual(5);
@@ -75,5 +74,4 @@ describe('ToolItem length changes after updateList is called', () => {
             expect(component2.state().items.length).toEqual(8);
         }
     });
-
 });

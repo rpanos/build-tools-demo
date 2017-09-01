@@ -35,11 +35,13 @@ class WebToolList extends React.Component {
                     let currId = 0, toolItems = [];
 
                     nameList.forEach(itemName => {
+                        // if previous item is available, maintain state
                         let item = _.find(that.state.items,
                             function(item) { return item.title === itemName });
+                        // else create fresh
                         if (!item) {
                             item = {title: itemName};
-                            item.choice = 'neu'; // get from prev
+                            item.choice = 'neu';
                         }
                         item.id = currId;
 
@@ -55,12 +57,14 @@ class WebToolList extends React.Component {
     updateChoice(choice, choiceId) { //() => {
         const items = this.state.items;
 
-        let nonNeutralCount = 0, match = _.find(this.state.items, function(item) { return item.id === choiceId });
+        let nonNeutralCount = 0, match = _.find(this.state.items,
+            function(item) { return item.id === choiceId });
         if (match) {
             match.choice = choice;
         }
         //Assumption: if a user puts a choice back to neutral, we are not counting it
-        let nonNeutral = _.filter(this.state.items, function(item) { return item.choice !== 'neu' });
+        let nonNeutral = _.filter(this.state.items,
+            function(item) { return item.choice !== 'neu' });
 
         if (nonNeutral) {
             nonNeutralCount = nonNeutral.length;
@@ -82,7 +86,7 @@ class WebToolList extends React.Component {
                 <div className="survey-wrapper">
                 <div className="survey-intro">
                     <div className="wm-icon"></div>
-                    <h2>JS Tool Survey</h2>
+                    <h2>JavaScript Tools Survey</h2>
                     <p>
                         Please give us your opinion on the following JavaScript tools.
                     </p>
