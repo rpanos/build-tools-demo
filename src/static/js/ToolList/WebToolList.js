@@ -84,11 +84,11 @@ class WebToolList extends React.Component {
                     <div className="wm-icon"></div>
                     <h2>JS Tool Survey</h2>
                     <p>
-                        Please indicate which Javascript tools and frameworks you have opinions on.
+                        Please give us your opinion on the following JavaScript tools.
                     </p>
                 </div>
                 <div className="survey-container">
-            {this.state.items.map(function (item, number) {
+            {this.state.items.map(function (item) {
                     return <ToolItem title={item.title} onChoiceClick={this.updateChoice}
                                      choiceId={item.id}>
                     </ToolItem>

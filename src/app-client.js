@@ -1,5 +1,5 @@
 
-//const React = require('react');
+const React = require('react');
 const ReactDOM = require('react-dom');
 
 import ToolItem from '../src/static/js/ToolList/ToolItem';

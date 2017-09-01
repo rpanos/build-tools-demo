@@ -2,7 +2,7 @@
  * Created by rpanos on 8/28/17.
  */
 
-import react from 'react';
+import React from 'react';
 import ToolItem from '../static/js/ToolList/ToolItem';
 import WebToolList from '../static/js/ToolList/WebToolList';
 import { mount, shallow } from 'enzyme';
@@ -47,21 +47,6 @@ describe('ToolItem changes class after clicks', () => {
         }
     });
 });
-//
-//it('fetches forks from GitHub', () => {
-//    const rendered = TestUtils.renderIntoDocument(
-//        <Detail params={{repo: 'react'}} />
-//    );
-//
-//    waitsFor(() => {
-//        console.log('In waitFor: ' + rendered.state.forks.length);
-//        return rendered.state.forks.length > 0;
-//    }, "commits to be set", 2000);
-//
-//    runs(() => {
-//        expect(rendered.state.forks.length).toEqual(30);
-//    });
-//});
 
 describe('ToolItem length changes after updateList is called', () => {
       const component2 = mount(

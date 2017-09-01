@@ -9,20 +9,6 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        preLoaders: [
-            // Javascript
-            {test: /\.jsx?$/, loader: 'eslint', exclude: /node_modules/},
-            {
-                test: /\.js?$/,
-                loader: 'eslint',
-                include: [
-                    path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'src/static'),
-                    path.resolve(__dirname, 'crap')
-                ],
-                exclude: /node_modules/
-            }
-        ],
         loaders: [{
             test: path.join(__dirname, 'src'),
             loader: ['babel-loader'],
@@ -30,19 +16,7 @@ module.exports = {
                 cacheDirectory: 'babel_cache',
                 presets: ['react', 'es2015']
             }
-        },
-
-            {
-                test: /\.js$/,
-                include: [
-                    path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'src')
-                ],
-                loader: 'eslint',
-                exclude: /node_modules/
-            }
-        ]
+        }]
     },
     eslint: {
         failOnWarning: false,

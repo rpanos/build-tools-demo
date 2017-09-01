@@ -1,7 +1,7 @@
 /**
  * Created by rpanos on 8/28/17.
  */
-import react from 'react';
+import React from 'react';
 import ToolItem from '../static/js/ToolList/ToolItem';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
